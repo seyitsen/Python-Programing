@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev 6</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            margin: 0;
+        }
+        .header {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .header h1, .header h2, .header h3 {
+            margin: 5px;
+        }
+        #chart {
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>İsim: Seyit</h1>
+        <h2>Soyisim: Şen</h2>
+        <h3>Öğrenci Numarası: 221220112</h3>
+    </div>
+
+    <div id="chart">
+        <img id="random-dots" src="/generate" alt="Random Dots">
+    </div>
+
+    <button onclick="refreshImage()">Yeni Noktalar Oluştur</button>
+
+    <script>
+        function refreshImage() {
+            var img = document.getElementById('random-dots');
+            img.src = '/generate?' + new Date().getTime();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
